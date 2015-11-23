@@ -1,4 +1,3 @@
-# Getting-and-Cleaning-Data
 ## The purpose of this project is to prepare tidy data that can be used for later analysis. 
 ## the data, and any transformations or work that you performed to clean up the data called CodeBook.md. 
 ## also include a README.md in the repo with your scripts. This repo explains how all of the
@@ -74,7 +73,7 @@ Data <- cbind(datFea, datComb)
 ##---------------------------------------------------------------------------------------
 
 ## Subset Name of Features by measurements on the mean and standard deviation
-## i.e taken Names of Features with “mean()” or “std()”
+## i.e taken Names of Features with "mean()" or "std()"
 
 subdatFeaNames <- datFeaNames$V2[grep("mean\\(\\)|std\\(\\)", datFeaNames$V2)]
 
@@ -89,7 +88,7 @@ head(Data,3)
 ## 4.- Uses descriptive activity names to name the activities in the data set
 ##-----------------------------------------------------------------------
 
-## Read descriptive activity names from “activity_labels.txt”
+## Read descriptive activity names from "activity_labels.txt"
 actLabels <- read.table(file.path(ruta, "activity_labels.txt"),header = FALSE)
 
 ## Replaces the values in the Varibale Activity with the values in the file activity_labels.txt
